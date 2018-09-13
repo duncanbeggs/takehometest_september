@@ -9,7 +9,7 @@ def print_usage():
     print("Please run script with correct parameters.")
     print("Argument 1: Location of input file.")
     print("Argument 2: Unix timestamp to check.Requires yyyy-MM-dd hh:mm:ss.sss format.")
-    print("EXAMPLE:: python main.py docs/log.csv \"2017-10-23 12:00:00\"") 
+    print("EXAMPLE:: python main.py docs/log.csv \"2017-10-23 12:00:00.000\"") 
     print("****************************************************************************")
 
 # Double check that the date the user has entered is in the correct format
