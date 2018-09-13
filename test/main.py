@@ -4,10 +4,6 @@ import datetime
 import sys
 from check_args import *
 
-# This function takes a file of timestamps and returns a dictionary mapping
-# Each timestamp to its count of connections
-def conn_counter(df, timestamps_f):
-    
 
 if __name__ == "__main__":
     # Check that the user input the correct arguments
@@ -35,20 +31,14 @@ if __name__ == "__main__":
     df['t_end'] = df['t_start'] + df['timeTaken']
 
     pd.options.display.float_format = '{:.4f}'.format
-
-    # in below loop for connections that were open during the specified user time
-    conn_count = 0
-    for i, row in df.iterrows():
-        print(row['endTs'], row['t_start'], row['t_end'])
-        if row['t_start'] <= u_time <= row['t_end']:
-            print("Found one!")
-            conn_count += 1
+    print(df)
 
 
-    print("*******************************************************")
-    print("*** There were", conn_count, "connections open at specified time ***")
-    print("*******************************************************")
     
+
+
+
+
 
 
 
